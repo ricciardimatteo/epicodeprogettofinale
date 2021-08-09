@@ -1,6 +1,24 @@
+
+
 #cercacliente{
+margin-left: 87px;
 margin-top:40px;
 color: white;
 width: 50%;
+
+}
+
+#table {
+margin-top: 30px;
+background-color:rgba(0, 0, 0, 0.459);
+font-size:0.8rem;
+}
+
+#table h1{
+ color: white;
+ text-align:center;
+}
+button{ 
+font-size: 0.9rem;
 
 }

@@ -11,6 +11,10 @@ import { AnagraficaclientsComponent } from './anagraficaclients/anagraficaclient
 import { AddclientComponent } from './addclient/addclient.component';
 import { ModificaclienteComponent } from './modificacliente/modificacliente.component';
 import { FattureComponent } from './fatture/fatture.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from 'src/material-module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { FattureComponent } from './fatture/fatture.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

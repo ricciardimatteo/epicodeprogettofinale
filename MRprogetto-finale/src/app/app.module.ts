@@ -11,6 +11,7 @@ import { AnagraficaclientsComponent } from './anagraficaclients/anagraficaclient
 import { AddclientComponent } from './addclient/addclient.component';
 import { ModificaclienteComponent } from './modificacliente/modificacliente.component';
 import { FattureComponent } from './fatture/fatture.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FattureComponent } from './fatture/fatture.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/material-module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { SedeOperativaComponent } from './sede-operativa/sede-operativa.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClientModule, HttpHeaders } from '@angular/common/http';
     AnagraficaclientsComponent,
     AddclientComponent,
     ModificaclienteComponent,
-    FattureComponent
+    FattureComponent,
+    SedeOperativaComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,12 @@ export class AnagraficaService {
 
 getAllClientipag(pagination:number) {
   return this.http.get<any>(environment.urlAPI + '/api/clienti?page='+pagination+'&size=20&sort=id,ASC', {headers: this.headers});
-  
+
+}
+
+getClienteid(id: number) {
+  return this.http.get<any>(environment.urlAPI + '/api/clienti/'+id, {headers: this.headers});
+
 }
 }
 

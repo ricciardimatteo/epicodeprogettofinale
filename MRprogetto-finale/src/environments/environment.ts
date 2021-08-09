@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   urlAPI:'https://epicode.online/epicodebeservice_v2',
-  urlAPInoAuth: 'https://epicode.online/epicodebeservice_v2_unauth'
+  urlAPInoAuth:'https://epicode.online/epicodebeservice_v2_unauth'
 };
 
 /*

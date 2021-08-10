@@ -8,29 +8,28 @@
         <th scope="col">P.iva</th>
         <th scope="col">Email/Pec/Tel</th>
         <th scope="col">Referente</th>
-        <th scope="col">Fatture</th>
+        <th scope="col">Fatture + <span>Fatturato Annuale</span> </th>
         <th scope="col">Modifica Cliente</th>
         <th scope="col">Cancella Utente</th>
-
-
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let item of clienti.content">
         <th scope="row">{{item.id}}</th>
-        <td> {{item.ragioneSociale}} <br> <button type="button" class="btn btn-primary btn-sm"> <i
-              class="fas fa-info-circle"> </i> Sede Legale</button> </td>
+        <td> {{item.ragioneSociale}} <br> <button type="button" class="btn btn-primary btn-sm"
+            (click)="sedelegale(item)"> <i class="fas fa-info-circle"> </i> Sede Legale</button> </td>
         <td> {{item.partitaIva}} <button type="button" class="btn btn-secondary btn-sm" (click)="sedeoperativa(item)"><i
               class="fas fa-info-circle"></i> Sede Operativa</button> </td>
         <td>{{item.email}} {{item.pec}} <br> {{item.telefono}}</td>
-        <td>{{item.nomeContatto}} {{item.cognomeContatto}} <br><button type="button"
-            class="btn btn-primary btn-sm mr-4"> <i class="fas fa-info-circle"></i> Dati Referente</button> </td>
-        <td><button type="button" class="btn btn-success btn-sm mr-4">Pagate</button> <button type="button"
-            class="btn btn-warning btn-sm">Da Pagare</button> </td>
+        <td>{{item.nomeContatto}} {{item.cognomeContatto}} <br><button type="button" class="btn btn-info btn-sm mr-4"
+            (click)="referente(item)"> <i class="fas fa-info-circle"></i> Dati Referente</button> </td>
+        <td><button type="button" class="btn btn-success btn-sm mr-4" (click)="gotofatture(item)"> <i
+              class="fas fa-money-check-alt"></i> FATTURE </button> <br> <button id="fattur"> &euro;
+            {{item.fatturatoAnnuale}}</button> </td>
         <td><button type="button" class="btn btn-info"> <i class="fas fa-users-cog"></i></button> </td>
         <td><button type="button" class="btn btn-danger"> <i class="fas fa-user-times"></i> </button> </td>
       </tr>
     </tbody>
   </table>
-  
+
 </div>

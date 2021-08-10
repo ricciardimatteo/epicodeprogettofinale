@@ -21,5 +21,9 @@ getClienteid(id: number) {
   return this.http.get<any>(environment.urlAPI + '/api/clienti/'+id, {headers: this.headers});
 
 }
+
+getfatturabyid(id:number){
+  return this.http.get<any>(environment.urlAPI + '/api/fatture/cliente/'+id, {headers: this.headers})
+}
 }
 

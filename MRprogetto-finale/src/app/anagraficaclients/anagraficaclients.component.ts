@@ -26,4 +26,20 @@ page = 1;
 sedeoperativa(item:any): void {
   this.route.navigate(['platformazienda',item.id,'sedeOperativa']);
 }
+
+sedelegale(item:any): void {
+  this.route.navigate(['platformazienda',item.id,'sedeLegale']);
+}
+
+referente(item:any): void {
+  this.route.navigate(['platformazienda',item.id,'datiReferente']);
+}
+gotofatture(item:any): void {
+  this.route.navigate(['platformazienda',item.id,'invoice'])
+}
+
+
+
+
+
 }

@@ -1,0 +1,18 @@
+<div class="container" id="getfattura">
+    <h1>FATTURE  <i class="fas fa-money-check-alt"></i> </h1>
+    <p *ngFor="let item of fattura.content"> 
+         Azienda: {{item.cliente.ragioneSociale}}<br>
+         Numero:{{item.numero}} <br> 
+         Anno: {{item.anno}} <br>
+         Importo:&euro; {{item.importo}} <br>
+         Data: {{item.data}}<br>
+         Stato Fattura:{{item.stato.nome}}
+     </p>
+
+
+    <button type="button" class="btn btn-success" routerLink="/platformazienda"><i class="fas fa-undo-alt"></i>Torna all'anagrafica
+        Clienti</button>
+
+</div>
+
+

@@ -22,3 +22,14 @@ button{
 font-size: 0.9rem;
 
 }
+span{
+background-color: rgb(126, 46, 126)
+}
+
+#fattur {
+font-size: 0.7rem;
+background-color: rgb(126, 46, 126);
+border-radius:20%;
+font-style:inherit;
+font-weight:bold
+}

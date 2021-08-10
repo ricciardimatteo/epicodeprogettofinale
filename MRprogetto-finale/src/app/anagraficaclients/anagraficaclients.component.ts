@@ -9,6 +9,8 @@ import { AnagraficaService } from '../services/anagrafica.service';
 })
 export class AnagraficaclientsComponent implements OnInit {
 clienti:any
+clienticount:any;
+page = 1;
   constructor(
     private anagraficaservice:AnagraficaService,
     private route:Router,
@@ -16,12 +18,10 @@ clienti:any
     ) { }
 
   ngOnInit(): void {
-  this.anagraficaservice.getAllClientipag(0).subscribe(response => this.clienti = response);
+  this.anagraficaservice.getclienti()
+  .subscribe (response =>this.clienti = response );
   }
 
-  getPaginations(pagination:number): void {
-  this.anagraficaservice.getAllClientipag(pagination).subscribe(data => this.clienti =data);
-}
 
 sedeoperativa(item:any): void {
   this.route.navigate(['platformazienda',item.id,'sedeOperativa']);

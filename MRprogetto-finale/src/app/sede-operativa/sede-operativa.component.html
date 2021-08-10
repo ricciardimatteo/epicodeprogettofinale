@@ -1,1 +1,25 @@
-<p>sede-operativa works!</p>
+<div class="container" id="sedeoperativa">
+
+    <h1> Info Sede Operativa<i class="fas fa-users"></i> </h1>
+
+    <p> Indirizzo:------><i class="fas fa-road"></i> Cliente: {{utenti.ragioneSociale}} <br>
+         Via: {{utenti.indirizzoSedeOperativa.via}} <br>
+         Civico:{{utenti.indirizzoSedeOperativa.civico}} <br> 
+         Cap: {{utenti.indirizzoSedeOperativa.cap}} <br>
+         Località: {{utenti.indirizzoSedeOperativa.localita}} <br>
+         Comune: {{utenti.indirizzoSedeOperativa.comune.nome}} <br>
+         Provincia: {{utenti.indirizzoSedeOperativa.comune.provincia.nome}} <br>
+         Sigla: {{utenti.indirizzoSedeOperativa.comune.provincia.sigla}} <br>
+
+
+
+
+
+    
+    </p>
+
+
+    <button type="button" class="btn btn-success" routerLink="/platformazienda"><i class="fas fa-undo-alt"></i>Torna all'anagrafica
+        Clienti</button>
+
+</div>

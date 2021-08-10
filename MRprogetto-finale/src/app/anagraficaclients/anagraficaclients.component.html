@@ -1,41 +1,36 @@
+<div class="container" id="table">
+  <h1> Anagrafica Clienti <i class="fas fa-users"> </i> </h1>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Ragione Sociale</th>
+        <th scope="col">P.iva</th>
+        <th scope="col">Email/Pec/Tel</th>
+        <th scope="col">Referente</th>
+        <th scope="col">Fatture</th>
+        <th scope="col">Modifica Cliente</th>
+        <th scope="col">Cancella Utente</th>
 
-  <div class="container" id="table">
-    <h1> Anagrafica Clienti <i class="fas fa-users"> </i> </h1>
-    <table class="table table-dark table-hover">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Ragione Sociale</th>
-          <th scope="col">P.iva</th>
-          <th scope="col">Email/Pec/Tel</th>
-          <th scope="col">Referente</th>
-          <th scope="col">Fatture</th>
-          <th scope="col">Modifica Cliente</th>
-          <th scope="col">Cancella Utente</th>
 
-
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of clienti.content">
-          <th scope="row">{{item.id}}</th>
-          <td> {{item.ragioneSociale}} <br> <button type="button" class="btn btn-primary btn-sm"> <i class="fas fa-info-circle"> </i> Sede Legale</button> </td>
-          <td> {{item.partitaIva}}  <button type="button" class="btn btn-secondary btn-sm"(click)="sedeoperativa(item)" ><i class="fas fa-info-circle"></i> Sede Operativa</button> </td>
-          <td>{{item.email}} {{item.pec}} <br> {{item.telefono}}</td>
-          <td>{{item.nomeContatto}} {{item.cognomeContatto}}  <br><button type="button" class="btn btn-primary btn-sm mr-4"> <i class="fas fa-info-circle"></i> Dati Referente</button> </td>
-          <td><button type="button" class="btn btn-success btn-sm mr-4">Pagate</button> <button type="button" class="btn btn-warning btn-sm">Da Pagare</button>  </td>
-          <td><button type="button" class="btn btn-info"> <i class="fas fa-users-cog"></i></button> </td>
-          <td><button type="button" class="btn btn-danger"> <i class="fas fa-user-times"></i> </button> </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <nav aria-label="...">
-      <ul class="pagination pagination-sm" >
-        <li class="page-item" *ngFor="let item of clienti.content; let i=index">
-          <a class="page-link" (click)="getPaginations(i+0)" >{{i+1}}</a>
-        </li>
-      </ul>
-    </nav> 
-  </div>
-
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of clienti.content">
+        <th scope="row">{{item.id}}</th>
+        <td> {{item.ragioneSociale}} <br> <button type="button" class="btn btn-primary btn-sm"> <i
+              class="fas fa-info-circle"> </i> Sede Legale</button> </td>
+        <td> {{item.partitaIva}} <button type="button" class="btn btn-secondary btn-sm" (click)="sedeoperativa(item)"><i
+              class="fas fa-info-circle"></i> Sede Operativa</button> </td>
+        <td>{{item.email}} {{item.pec}} <br> {{item.telefono}}</td>
+        <td>{{item.nomeContatto}} {{item.cognomeContatto}} <br><button type="button"
+            class="btn btn-primary btn-sm mr-4"> <i class="fas fa-info-circle"></i> Dati Referente</button> </td>
+        <td><button type="button" class="btn btn-success btn-sm mr-4">Pagate</button> <button type="button"
+            class="btn btn-warning btn-sm">Da Pagare</button> </td>
+        <td><button type="button" class="btn btn-info"> <i class="fas fa-users-cog"></i></button> </td>
+        <td><button type="button" class="btn btn-danger"> <i class="fas fa-user-times"></i> </button> </td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>

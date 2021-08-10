@@ -9,12 +9,12 @@ import { AnagraficaService } from '../services/anagrafica.service';
 })
 export class SedeOperativaComponent implements OnInit {
    utenti: any;
-  constructor( private anagraficaservice:AnagraficaService,private router: ActivatedRoute) { }
+  
 
   ngOnInit(): void {
     this.router.params.subscribe(params => 
       this.anagraficaservice.getClienteid(params.id)
         .subscribe(response => this.utenti = response))
   }
-
+  constructor( private anagraficaservice:AnagraficaService,private router: ActivatedRoute) { }
 }

@@ -12,9 +12,9 @@ export class AnagraficaService {
     this.headers = this.headers.set("Authorization", 'Bearer ' + this.beaererAuth).set("X-TENANT-ID", 'fe_0321');
   }
 
-getAllClientipag(pagination:number) {
-  return this.http.get<any>(environment.urlAPI + '/api/clienti?page='+pagination+'&size=20&sort=id,ASC', {headers: this.headers});
 
+getclienti(){
+  return this.http.get<any>(environment.urlAPI + '/api/clienti?size=400&sort=id,ASC',{headers: this.headers})
 }
 
 getClienteid(id: number) {

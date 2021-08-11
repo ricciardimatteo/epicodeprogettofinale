@@ -22,8 +22,28 @@ getClienteid(id: number) {
 
 }
 
+deleteCliente(id:number) {
+  return this.http.delete<any>(environment.urlAPI + '/api/clienti/'+id, {headers: this.headers});
+}
+
+addCliente (client:any) {
+  return this.http.post<any>(environment.urlAPI + '/api/clienti/',client, {headers: this.headers});
+}
+
+getComuni () {
+return this.http.get<any>(environment.urlAPI + '/api/comuni?page=0&size=20&sort=id,ASC', {headers: this.headers});
+}
+
+getTipoCliente () {
+  return this.http.get<any>(environment.urlAPI + '/api/clienti/tipicliente', {headers: this.headers});
+  }
+  
+getProvince () {
+  return this.http.get<any>(environment.urlAPI + '/api/province?page=0&size=20&sort=id,ASC', {headers: this.headers});
+    }
+
 getfatturabyid(id:number){
-  return this.http.get<any>(environment.urlAPI + '/api/fatture/cliente/'+id, {headers: this.headers})
+  return this.http.get<any>(environment.urlAPI + '/api/fatture/cliente/'+id, {headers: this.headers});
 }
 }
 

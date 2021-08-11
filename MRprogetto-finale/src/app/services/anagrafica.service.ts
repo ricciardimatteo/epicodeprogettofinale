@@ -30,6 +30,10 @@ addCliente (client:any) {
   return this.http.post<any>(environment.urlAPI + '/api/clienti/',client, {headers: this.headers});
 }
 
+modificaClienti (client:any) { 
+  return this.http.put<any>(environment.urlAPI + '/api/clienti/'+client.id,client, {headers: this.headers});
+}
+
 getComuni () {
 return this.http.get<any>(environment.urlAPI + '/api/comuni?page=0&size=20&sort=id,ASC', {headers: this.headers});
 }

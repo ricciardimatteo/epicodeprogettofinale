@@ -19,6 +19,8 @@ import { SedeOperativaComponent } from './sede-operativa/sede-operativa.componen
 import { SedeLegaleComponent } from './sede-legale/sede-legale.component';
 import { DatiReferenteComponent } from './dati-referente/dati-referente.component';
 import { GetfatturaComponent } from './getfattura/getfattura.component';
+import { ArchivioFattureComponent } from './archivio-fatture/archivio-fatture.component';
+import { FattureSaldateComponent } from './fatture-saldate/fatture-saldate.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { GetfatturaComponent } from './getfattura/getfattura.component';
     SedeOperativaComponent,
     SedeLegaleComponent,
     DatiReferenteComponent,
-    GetfatturaComponent
+    GetfatturaComponent,
+    ArchivioFattureComponent,
+    FattureSaldateComponent
   ],
   imports: [
     BrowserModule,

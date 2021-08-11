@@ -30,19 +30,17 @@ export class AddclientComponent implements OnInit {
       telefonoContatto: '', 
       emailContatto: '',
     indirizzoSedeOperativa: {
-      id:1, 
       via: '', 
       civico: '',
        cap: '', 
        localita: '',
       comune: {
-        id: '', 
+        id:1, 
         nome: '',
-        provincia:  { id: '', nome: '', sigla: '' }
+        provincia:  { id:1, nome: '', sigla: '' }
       }
     },
     indirizzoSedeLegale: {
-      id:1,
        via: '', 
        civico: '', 
        cap: '', 
@@ -52,7 +50,6 @@ export class AddclientComponent implements OnInit {
         nome: '', 
         provincia: { id: 1, nome: '', sigla: '' } }
     },
-    dataInserimento: '', dataUltimoContatto: '', fatturatoAnnuale: ''
   }
 
 
@@ -67,7 +64,9 @@ export class AddclientComponent implements OnInit {
   
   adduser(){
     console.log(this.newClient)
+    alert('Nuovo Utente Aggiunto - Al render anagrafica ricordati di aggiornare la pagina per vedere il nuovo Utente')
   this.anagraficaservice.addCliente(this.newClient).subscribe(resp=> console.log(resp));
+  this.router.navigate(['platformazienda'])
   }
 
 

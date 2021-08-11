@@ -1,6 +1,6 @@
 <div id="nuovocliente">
 
-  <h1> INSERIMENTO NUOVO CLIENTE </h1>
+  <h1> INSERIMENTO NUOVO CLIENTE <i class="fas fa-user-plus"></i> </h1>
   <div class="container">
 
     <!-- Grid row -->
@@ -17,10 +17,10 @@
         <input type="text" class="form-control" placeholder="Partita Iva" name="partitaIva"
           [(ngModel)]="newClient.partitaIva">
       </div>
-      <div class="form-group col-md-3"><!-- [(ngModel)]="newClient.tipoCliente" -->
-        <h3>Tipo Cliente</h3>
-        <select class="browser-default custom-select">
-          <option selected *ngFor="let item of tipocliente">{{item}}</option><!--  [ngValue]="item" -->
+      <div class="form-group col-md-3">
+        <label for="inputCity">Tipo Cliente</label>
+        <select class="browser-default custom-select"[(ngModel)]="newClient.tipoCliente" >
+          <option selected *ngFor="let item of tipocliente"[ngValue]="item">{{item}}</option>
         </select>
 
       </div>
@@ -108,18 +108,18 @@
 
             <div class="form-group col-md-3">
               <h3>Comune</h3>
-              <select class="browser-default custom-select"><!-- [(ngModel)]="newClient.indirizzoSedeOperativa.comune.nome" -->
-                <option selected *ngFor="let item of comune.content">{{item.nome}}</option><!-- [ngValue]="item"  -->
+              <select class="browser-default custom-select"[(ngModel)]="newClient.indirizzoSedeOperativa.comune">
+                <option selected *ngFor="let item of comune.content"[ngValue]="item">{{item.nome}}</option>
               </select>
 
                 <h3>Provincia</h3>
-                <select class="browser-default custom-select" ><!-- [(ngModel)]="newClient.indirizzoSedeOperativa.provincia.nome" -->
-                  <option selected *ngFor="let item of province.content">{{item.nome}}</option><!-- [ngValue]="item" -->
+                <select class="browser-default custom-select"[(ngModel)]="newClient.indirizzoSedeOperativa.provincia">
+                  <option selected *ngFor="let item of province.content"[ngValue]="item" >{{item.nome}}</option>
                 </select>
 
                 <h3>Sigla</h3>
-                <select class="browser-default custom-select"><!-- [(ngModel)]="newClient.indirizzoSedeOperativa.provincia.sigla" -->
-                  <option selected *ngFor="let item of province.content">{{item.sigla}}</option><!-- [ngValue]="item" -->
+                <select class="browser-default custom-select"[(ngModel)]="newClient.indirizzoSedeOperativa.provincia">
+                  <option selected *ngFor="let item of province.content"[ngValue]="item">{{item.sigla}}</option>
                 </select>
 
               </div>
@@ -161,18 +161,18 @@
         
                     <div class="form-group col-md-3">
                       <h3>Comune</h3>
-                      <select class="browser-default custom-select">
-                        <option selected *ngFor="let item of comune.content">{{item.nome}}</option>
+                      <select class="browser-default custom-select"[(ngModel)]="newClient.indirizzoSedeLegale.comune">
+                        <option selected *ngFor="let item of comune.content"[ngValue]="item">{{item.nome}}</option>
                       </select>
         
                         <h3>Provincia</h3>
-                        <select class="browser-default custom-select">
-                          <option selected *ngFor="let item of province.content">{{item.nome}}</option>
+                        <select class="browser-default custom-select"[(ngModel)]="newClient.indirizzoSedeLegale.provincia">
+                          <option selected *ngFor="let item of province.content"[ngValue]="item">{{item.nome}}</option>
                         </select>
         
                         <h3>Sigla</h3>
-                        <select class="browser-default custom-select">
-                          <option selected *ngFor="let item of province.content">{{item.sigla}}</option>
+                        <select class="browser-default custom-select"[(ngModel)]="newClient.indirizzoSedeLegale.provincia">
+                          <option selected *ngFor="let item of province.content"[ngValue]="item">{{item.sigla}}</option>
                         </select> <br> <hr>
                         <button id="buttonAdd"  type="button" class="btn btn-success btn-lg" (click)="adduser()">Inserisci in
                           Anagrafica <i class="far fa-thumbs-up"></i> </button>

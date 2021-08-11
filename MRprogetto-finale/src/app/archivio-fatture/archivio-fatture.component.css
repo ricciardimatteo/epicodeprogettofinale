@@ -1,0 +1,20 @@
+h1{
+text-align: center;
+margin-top:40px;
+color: rgb(0, 0, 0);
+background-color:white;
+}
+
+#archiviofatt{
+    padding:200px 350px 200px;
+    font-size:1.1rem;
+    line-height:1.4rem;
+display: flex;
+flex-wrap: nowrap;
+flex-direction: row;
+}
+
+#archiviofatt div{
+flex-grow: 1;
+flex-basis: 55%;
+}

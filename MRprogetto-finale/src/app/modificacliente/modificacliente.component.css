@@ -1,0 +1,11 @@
+#modificacliente {
+    background-color: rgba(23, 5, 105, 0.76);
+    color: white;
+    margin-top:30px;
+    font-size:1.1rem;
+    line-height:1.4rem;
+}
+
+#modificacliente h1 {
+text-align: center;
+}

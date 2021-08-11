@@ -21,4 +21,8 @@ export class FattureService {
     return this.http.get<any>(environment.urlAPI + '/api/fatture/stato/2?size=5000', {headers: this.headers})
   }
 
+  getfatturasaldata(){
+    return this.http.get<any>(environment.urlAPI + '/api/fatture/stato/1?size=5000', {headers: this.headers})
+  }
+
 }

@@ -22,6 +22,12 @@ clienti:any
   .subscribe (response =>this.clienti = response );
   }
 
+  removeuser(item:any):void {
+    alert('Utente Rimosso')
+    this.anagraficaservice.deleteCliente(item.id).subscribe(response =>this.anagraficaservice.getclienti()
+    .subscribe (response =>this.clienti = response ));
+    
+  }
 
 sedeoperativa(item:any): void {
   this.route.navigate(['platformazienda',item.id,'sedeOperativa']);
@@ -36,6 +42,10 @@ referente(item:any): void {
 }
 gotofatture(item:any): void {
   this.route.navigate(['platformazienda',item.id,'invoice'])
+}
+
+gotomodifica (item:any): void {
+  this.route.navigate(['platformazienda',item.id,'modificacliente'])
 }
 
 

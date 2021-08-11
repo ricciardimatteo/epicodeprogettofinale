@@ -1,1 +1,195 @@
-<p>modificacliente works!</p>
+<div id="modificacliente">
+
+    <h1> MODIFICA CLIENTE <i class="fas fa-user-cog"></i> </h1>
+    <div class="container">
+
+        <!-- Grid row -->
+        <div class="form-row">
+            <!-- Default input -->
+            <div class="form-group col-md-6">
+                <label for="inputCity">Ragione Sociale</label>
+                <input type="text" class="form-control" placeholder="Inserisci la Ragione Sociale" name="ragioneSociale"
+                    [(ngModel)]="newClient.ragioneSociale">
+            </div>
+            <!-- Default input -->
+            <div class="form-group col-md-6">
+                <label for="inputCity">Partita IVA</label>
+                <input type="text" class="form-control" placeholder="Partita Iva" name="partitaIva"
+                    [(ngModel)]="newClient.partitaIva">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputCity">Tipo Cliente</label>
+                <select class="browser-default custom-select" [(ngModel)]="newClient.tipoCliente">
+                    <option selected *ngFor="let item of tipocliente" [ngValue]="item">{{item}}</option>
+                </select>
+
+            </div>
+
+            <div class="form-group col-md-3">
+                <label for="inputEmail">Email</label>
+                <input type="text" class="form-control" placeholder="Inserisci la tua mail" name="email"
+                    [(ngModel)]="newClient.email">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputPec">Pec</label>
+                <input type="text" class="form-control" placeholder="Inserisci la tua mail" name="pec"
+                    [(ngModel)]="newClient.pec">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputTelefono">Telefono</label>
+                <input type="text" class="form-control" placeholder="Inserisci numero" name="telefono"
+                    [(ngModel)]="newClient.telefono">
+            </div>
+        </div>
+        <!-- Grid row -->
+
+
+        <div class="form-row">
+            <!-- Default input -->
+            <div class="form-group col-md-3">
+
+                <label for="inputCity">Nome Contatto</label>
+                <input type="text" class="form-control" placeholder="Nome Contatto" name="nomeContatto"
+                    [(ngModel)]="newClient.nomeContatto">
+            </div>
+            <!-- Default input -->
+            <div class="form-group col-md-3">
+                <label for="inputCity">Cognome Contatto</label>
+                <input type="text" class="form-control" placeholder="Cognome Contatto" name="cognomeContatto"
+                    [(ngModel)]="newClient.cognomeContatto">
+            </div>
+
+            <!-- Default input -->
+            <div class="form-group col-md-3">
+                <label for="inputTelefono">Telefono</label>
+                <input type="text" class="form-control" placeholder="Telefono" name="telefonoContatto"
+                    [(ngModel)]="newClient.telefonoContatto">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputEmail">Email Contatto</label>
+                <input type="text" class="form-control" placeholder="emailContatto" name="emailContatto"
+                    [(ngModel)]="newClient.emailContatto">
+            </div>
+
+            <hr>
+
+
+
+            <div class="container">
+                <h1> MODIFICA DATI SEDE OPERATIVA <i class="fas fa-user-cog"></i> </h1>
+                <!-- Grid row -->
+                <div class="form-row">
+                    <!-- Default input -->
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">Via</label>
+                        <input type="text" class="form-control" placeholder="Inserisci la via sede Operativa"
+                            name="viaSoperativa" [(ngModel)]="newClient.indirizzoSedeOperativa.via">
+                    </div>
+                    <!-- Default input -->
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">Civico</label>
+                        <input type="text" class="form-control" placeholder="N.Civico" name="civicoSoperativa"
+                            [(ngModel)]="newClient.indirizzoSedeOperativa.civico">
+                    </div>
+
+                    <div class="form-row">
+                        <!-- Default input -->
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Cap</label>
+                            <input type="text" class="form-control" placeholder="Inserisci Cap" name="capSoperativa"
+                                [(ngModel)]="newClient.indirizzoSedeOperativa.cap">
+                        </div>
+                        <!-- Default input -->
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Località</label>
+                            <input type="text" class="form-control" placeholder="Località" name="localitàSoperativa"
+                                [(ngModel)]="newClient.indirizzoSedeOperativa.localita">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <h3>Comune</h3>
+                            <select class="browser-default custom-select"
+                                [(ngModel)]="newClient.indirizzoSedeOperativa.comune">
+                                <option selected *ngFor="let item of comune.content" [ngValue]="item">{{item.nome}}
+                                </option>
+                            </select>
+
+                            <h3>Provincia</h3>
+                            <select class="browser-default custom-select"
+                                [(ngModel)]="newClient.indirizzoSedeOperativa.provincia">
+                                <option selected *ngFor="let item of province.content" [ngValue]="item">{{item.nome}}
+                                </option>
+                            </select>
+
+                            <h3>Sigla</h3>
+                            <select class="browser-default custom-select"
+                                [(ngModel)]="newClient.indirizzoSedeOperativa.provincia">
+                                <option selected *ngFor="let item of province.content" [ngValue]="item">{{item.sigla}}
+                                </option>
+                            </select>
+
+                        </div>
+
+                        <hr>
+
+
+
+                        <div class="container">
+                            <h1> MODIFICA DATI SEDE LEGALE <i class="fas fa-user-cog"></i> </h1>
+                            <!-- Grid row -->
+                            <div class="form-row">
+                                <!-- Default input -->
+                                <div class="form-group col-md-6">
+                                    <label for="inputCity">Via</label>
+                                    <input type="text" class="form-control" placeholder="Inserisci la via sede Legale"
+                                        name="viaSlegale" [(ngModel)]="newClient.indirizzoSedeLegale.via">
+                                </div>
+                                <!-- Default input -->
+                                <div class="form-group col-md-6">
+                                    <label for="inputCity">Civico</label>
+                                    <input type="text" class="form-control" placeholder="N.Civico" name="civicoSlegale"
+                                        [(ngModel)]="newClient.indirizzoSedeLegale.civico">
+                                </div>
+
+                                <div class="form-row">
+                                    <!-- Default input -->
+                                    <div class="form-group col-md-6">
+                                        <label for="inputCity">Cap</label>
+                                        <input type="text" class="form-control" placeholder="Inserisci Cap"
+                                            name="capSlegale" [(ngModel)]="newClient.indirizzoSedeLegale.cap">
+                                    </div>
+                                    <!-- Default input -->
+                                    <div class="form-group col-md-6">
+                                        <label for="inputCity">Località</label>
+                                        <input type="text" class="form-control" placeholder="Località"
+                                            name="localitàSlegale" [(ngModel)]="newClient.indirizzoSedeLegale.localita">
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <h3>Comune</h3>
+                                        <select class="browser-default custom-select"
+                                            [(ngModel)]="newClient.indirizzoSedeLegale.comune">
+                                            <option selected *ngFor="let item of comune.content" [ngValue]="item">
+                                                {{item.nome}}</option>
+                                        </select>
+
+                                        <h3>Provincia</h3>
+                                        <select class="browser-default custom-select"
+                                            [(ngModel)]="newClient.indirizzoSedeLegale.provincia">
+                                            <option selected *ngFor="let item of province.content" [ngValue]="item">
+                                                {{item.nome}}</option>
+                                        </select>
+
+                                        <h3>Sigla</h3>
+                                        <select class="browser-default custom-select"
+                                            [(ngModel)]="newClient.indirizzoSedeLegale.provincia">
+                                            <option selected *ngFor="let item of province.content" [ngValue]="item">
+                                                {{item.sigla}}</option>
+                                        </select> <br>
+                                        <hr>
+                                        <button id="buttonAdd" type="button" class="btn btn-primary btn-lg"
+                                            (click)="modificauser()">Modifica e Aggiungi in
+                                            Anagrafica <i class="far fa-thumbs-up"></i> </button>
+
+                                    </div>
+                                    <hr>

@@ -9,8 +9,8 @@ import { AnagraficaService } from '../services/anagrafica.service';
 })
 export class AnagraficaclientsComponent implements OnInit {
 clienti:any
-clienticount:any;
-page = 1;
+
+
   constructor(
     private anagraficaservice:AnagraficaService,
     private route:Router,

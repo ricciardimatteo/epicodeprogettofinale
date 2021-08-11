@@ -1,1 +1,21 @@
-<p>fatture works!</p>
+<div class="container" id="fatture">
+    <h1>FATTURE DA SALDARE  <i class="fas fa-money-check-alt"></i> </h1>
+    <p *ngFor="let item of invoice.content"> 
+         Azienda: {{item.cliente.ragioneSociale}}<br>
+         Numero:{{item.numero}} <br> 
+         Anno: {{item.anno}} <br>
+         Importo:&euro; {{item.importo}} <br>
+         Data: {{item.data}}<br>
+         <button type="button" class="btn btn-warning btn-sm">Contatta Referente Azienda: <br> {{item.cliente.telefonoContatto}} <br> {{item.cliente.emailContatto}}</button>
+     </p>
+
+
+    <button type="button" class="btn btn-success" routerLink="/platformazienda"><i class="fas fa-undo-alt"></i>Torna all'anagrafica
+        Clienti</button>
+
+</div>
+
+
+
+
+

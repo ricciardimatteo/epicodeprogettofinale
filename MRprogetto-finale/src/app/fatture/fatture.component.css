@@ -1,0 +1,11 @@
+#fatture{
+    background-color: rgba(0, 0, 0, 0.911);
+    color: rgb(236, 18, 18);
+    margin-top:30px;
+    font-size:1.0rem;
+    line-height:1.4rem;
+    }
+
+    button {
+    font-weight: bold;
+    }

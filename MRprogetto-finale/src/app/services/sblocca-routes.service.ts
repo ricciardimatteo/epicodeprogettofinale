@@ -16,7 +16,7 @@ private login = false;
       if(resp != null){
         this.login = true;
       } else {
-        alert ('username e/o password incorrect')
+        alert('username e/o password incorrect')
       }
     }
   }

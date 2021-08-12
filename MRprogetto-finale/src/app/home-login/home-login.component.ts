@@ -20,8 +20,7 @@ objectlogin:any;
   }
 
 vai(): void {
-  alert('utenteaggiunto')
- this.loginService.addLogin(this.loginMember).subscribe(response=>{ console.log(response)
+this.loginService.addLogin(this.loginMember).subscribe(response=>{ console.log(response)
 this.sbloccarotte.loginTrue(response)
 this.router.navigate(['platformazienda']) 
  }) 

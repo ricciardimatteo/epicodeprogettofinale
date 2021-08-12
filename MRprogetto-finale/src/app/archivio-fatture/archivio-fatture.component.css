@@ -1,14 +1,15 @@
 h1{
 text-align: center;
-margin-top:40px;
+margin-top:80px;
 color: rgb(0, 0, 0);
-background-color:white;
+background-color:rgba(255, 255, 255, 0.733);
+width:100%;
+border-radius:20%
 }
 
 #archiviofatt{
-    padding:200px 350px 200px;
-    font-size:1.1rem;
-    line-height:1.4rem;
+font-size:1.1rem;
+line-height:1.4rem;
 display: flex;
 flex-wrap: nowrap;
 flex-direction: row;
@@ -18,3 +19,4 @@ flex-direction: row;
 flex-grow: 1;
 flex-basis: 55%;
 }
+

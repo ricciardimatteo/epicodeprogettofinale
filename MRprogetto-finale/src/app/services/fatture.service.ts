@@ -40,4 +40,5 @@ export class FattureService {
     return this.http.post<any>(environment.urlAPI + '/api/fatture/',fatture, {headers: this.headers});
 
 }
+
 }

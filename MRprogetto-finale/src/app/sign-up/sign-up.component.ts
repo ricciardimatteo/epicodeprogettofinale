@@ -8,11 +8,12 @@ import { SignupLoginService } from '../services/signup-login.service';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-  newUser :any ={ 
+  newUser :any ={
+    id: "", 
     username :'',
     email:'',
     password:'',
-    role:['user'],
+    roles:['ROLE_USER'],
   }
 
 

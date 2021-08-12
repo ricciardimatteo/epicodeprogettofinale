@@ -16,7 +16,7 @@ export class NewInvoiceComponent implements OnInit {
   newClient:any={
     id:1,
     data:new Date,
-    numero:1,
+    numero:"",
     anno:new Date().getFullYear(),
     importo:1,
     stato:{

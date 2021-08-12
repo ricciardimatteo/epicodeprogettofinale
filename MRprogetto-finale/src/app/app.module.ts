@@ -26,6 +26,7 @@ import { NewInvoiceComponent } from './new-invoice/new-invoice.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     FattureSaldateComponent,
     EditFattureComponent,
     NewInvoiceComponent,
-    SignUpComponent
+    SignUpComponent,
+    
   ],
   imports: [
     BrowserModule,

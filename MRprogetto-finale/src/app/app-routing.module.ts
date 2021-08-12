@@ -13,10 +13,12 @@ import { ModificaclienteComponent } from './modificacliente/modificacliente.comp
 import { NewInvoiceComponent } from './new-invoice/new-invoice.component';
 import { SedeLegaleComponent } from './sede-legale/sede-legale.component';
 import { SedeOperativaComponent } from './sede-operativa/sede-operativa.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'platformazienda/index', pathMatch: 'full' },
   { path: 'platformazienda/index', component:HomeLoginComponent},
+  { path: 'platformazienda/signup', component:SignUpComponent},
   { path: 'platformazienda', component:AnagraficaclientsComponent},
   { path: 'platformazienda/nuovocliente', component:AddclientComponent},
   { path: 'platformazienda/:id/modificacliente', component:ModificaclienteComponent},

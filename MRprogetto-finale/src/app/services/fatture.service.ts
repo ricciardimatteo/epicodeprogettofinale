@@ -36,6 +36,8 @@ export class FattureService {
   UpdateInvoice (fattura:any) { 
     return this.http.put<any>(environment.urlAPI + '/api/fatture/'+fattura.id,fattura, {headers: this.headers});
   }
-  
+  addinvoice (fatture:any) {
+    return this.http.post<any>(environment.urlAPI + '/api/fatture/',fatture, {headers: this.headers});
 
+}
 }

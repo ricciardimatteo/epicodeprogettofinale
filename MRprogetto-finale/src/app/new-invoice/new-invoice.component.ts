@@ -34,6 +34,9 @@ export class NewInvoiceComponent implements OnInit {
     
   }
   addfattura(): void {
-
+    console.log(this.newClient)
+    alert('Nuovo Utente Aggiunto - Al render anagrafica ricordati di aggiornare la pagina per vedere il nuovo Utente')
+  this.fattureservice.addinvoice(this.newClient).subscribe(resp=> console.log(resp));
+  this.route.navigate(['platformazienda/archiviofatture'])
   }
 }

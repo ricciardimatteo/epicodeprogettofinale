@@ -23,6 +23,7 @@ import { ArchivioFattureComponent } from './archivio-fatture/archivio-fatture.co
 import { FattureSaldateComponent } from './fatture-saldate/fatture-saldate.component';
 import { EditFattureComponent } from './edit-fatture/edit-fatture.component';
 import { NewInvoiceComponent } from './new-invoice/new-invoice.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { NewInvoiceComponent } from './new-invoice/new-invoice.component';
     ArchivioFattureComponent,
     FattureSaldateComponent,
     EditFattureComponent,
-    NewInvoiceComponent
+    NewInvoiceComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

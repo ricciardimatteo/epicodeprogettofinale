@@ -27,18 +27,24 @@
                 [(ngModel)]="newClient.importo">
         </div>
 
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-6">
             <label for="inputCity"> STATO FATTURA </label>
             <select class="browser-default custom-select" [(ngModel)]="newClient.stato">
                 <option selected *ngFor="let item of stato.content" [ngValue]="item">{{item.nome}}</option>
             </select>
+        </div>
 
-            <div class="form-group col-md-3">
+        <hr>
+
+            <div class="form-group col-md-6">
                 <label for="inputCity"><span> SCELTA CLIENTI DA ANAGRAFICA  <i class="fas fa-arrow-down"></i> </span></label>
                 <select class="browser-default custom-select" [(ngModel)]="newClient.cliente">
                     <option selected *ngFor="let item of clienti.content" [ngValue]="item">{{item.ragioneSociale}}</option>
                 </select>
+            </div>
             <hr>
+
+
             <button id="buttonAdd" type="button" class="btn btn-primary btn-lg"
                 (click)="addfattura()">EMETTI FATTURA <i class="far fa-thumbs-up"></i> </button>
 

@@ -1,0 +1,36 @@
+<div id="login">
+    <h1>Nuovo User <i class="fas fa-user-tie"></i>  </h1>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="Il tuo Nome" [(ngModel)]="newUser.nome"  >
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+     
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Cognome</mat-label>
+        <input  matInput placeholder="Il tuo Cognome" [(ngModel)]="newUser.cognome">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+     </mat-form-field> <br>
+
+     <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input  matInput placeholder="Scegli il tuo UserName"[(ngModel)]="newUser.username">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+     </mat-form-field> <br>
+
+     <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input  matInput placeholder="La tua Email"[(ngModel)]="newUser.email" >
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+     </mat-form-field> <br>
+
+     <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Enter Your Password"[(ngModel)]="newUser.password">
+        <mat-icon type="password" matSuffix>sentiment_very_satisfied</mat-icon>
+     </mat-form-field> <br>
+
+
+      <button mat-raised-button color="primary"(click)="addnewuser()"> Inserisci nuovo User <i class="fas fa-key"></i> </button> <br>
+      <hr>

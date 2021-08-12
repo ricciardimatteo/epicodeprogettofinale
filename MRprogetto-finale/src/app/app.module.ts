@@ -21,6 +21,8 @@ import { DatiReferenteComponent } from './dati-referente/dati-referente.componen
 import { GetfatturaComponent } from './getfattura/getfattura.component';
 import { ArchivioFattureComponent } from './archivio-fatture/archivio-fatture.component';
 import { FattureSaldateComponent } from './fatture-saldate/fatture-saldate.component';
+import { EditFattureComponent } from './edit-fatture/edit-fatture.component';
+import { NewInvoiceComponent } from './new-invoice/new-invoice.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { FattureSaldateComponent } from './fatture-saldate/fatture-saldate.compo
     DatiReferenteComponent,
     GetfatturaComponent,
     ArchivioFattureComponent,
-    FattureSaldateComponent
+    FattureSaldateComponent,
+    EditFattureComponent,
+    NewInvoiceComponent
   ],
   imports: [
     BrowserModule,

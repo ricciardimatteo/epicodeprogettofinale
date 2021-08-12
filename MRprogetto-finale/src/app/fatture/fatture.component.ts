@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FattureService } from '../services/fatture.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class FattureComponent implements OnInit {
 
 
   constructor(
-    private fattureservice:FattureService,
+    private fattureservice:FattureService, private router:Router
    
     ) { }
 
@@ -19,4 +20,10 @@ export class FattureComponent implements OnInit {
   this.fattureservice.getfatturainsoluta()
   .subscribe (response =>this.invoice= response );
   }
+
+  getsingleinvoice(item:any):void {
+    this.router.navigate(['platformazienda/fattureinsolute',item.id,'editinvoice'])
+  }
+
+
 }

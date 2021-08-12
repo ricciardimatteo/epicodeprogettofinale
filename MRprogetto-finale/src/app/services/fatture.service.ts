@@ -21,8 +21,21 @@ export class FattureService {
     return this.http.get<any>(environment.urlAPI + '/api/fatture/stato/2?size=5000', {headers: this.headers})
   }
 
+  getfatturastato(){
+    return this.http.get<any>(environment.urlAPI + '/api/statifattura', {headers: this.headers})
+
+  }
+
   getfatturasaldata(){
     return this.http.get<any>(environment.urlAPI + '/api/fatture/stato/1?size=5000', {headers: this.headers})
   }
+  getsingolafatturabyid(id:number){
+    return this.http.get<any>(environment.urlAPI + '/api/fatture/'+id, {headers: this.headers})
+  }
+
+  UpdateInvoice (fattura:any) { 
+    return this.http.put<any>(environment.urlAPI + '/api/fatture/'+fattura.id,fattura, {headers: this.headers});
+  }
+  
 
 }

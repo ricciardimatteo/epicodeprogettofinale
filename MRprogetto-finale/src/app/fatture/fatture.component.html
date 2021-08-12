@@ -6,7 +6,9 @@
          Anno: {{item.anno}} <br>
          Importo:&euro; {{item.importo}} <br>
          Data: {{item.data}}<br>
-         <button type="button" class="btn btn-warning btn-sm">Contatta Referente Azienda: <br> {{item.cliente.telefonoContatto}} <br> {{item.cliente.emailContatto}}</button>
+         <button type="button" class="btn btn-warning btn-sm mx-3">Contatta Referente Azienda: <br> {{item.cliente.telefonoContatto}} <br> {{item.cliente.emailContatto}}</button>
+         <button type="button" class="btn btn-info btn-sm" (click)="getsingleinvoice(item)">Imposta Fattura  <br>come Saldata <br><i class="fas fa-check-double"></i> </button>
+        
      </p>
 
 

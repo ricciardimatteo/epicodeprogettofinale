@@ -16,7 +16,8 @@ export class SignupLoginService {
 
 addSignup (data:any) {
     return this.http.post(environment.urlAPI +'/api/auth/signup', data,{headers: this.headers});
-
-
+}
+addLogin (data:any) {
+  return this.http.post(environment.urlAPI +'/api/auth/login', data,{headers: this.headers});
 }
 }

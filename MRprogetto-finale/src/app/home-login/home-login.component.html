@@ -5,21 +5,21 @@
     <h1>Login Azienda</h1>
 
     <mat-form-field appearance="fill">
-      <mat-label>Email</mat-label>
-      <input matInput placeholder="Enter Your Email">
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="Enter Your UserName" [(ngModel)]="loginMember.username">
       <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
      
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Password</mat-label>
-        <input type="password" matInput placeholder="Enter Your Password">
+        <input type="password" matInput placeholder="Enter Your Password"[(ngModel)]="loginMember.password">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
      </mat-form-field> <br>
-      <button mat-raised-button color="primary">  Login <i class="fas fa-key"></i> </button> <br>
+      <button (click)="vai()" mat-raised-button color="primary">  Login <i class="fas fa-key"></i> </button> <br>
       <hr>
      
     <p>Vuoi Inserire un Nuovo User-Login?</p>
-    <button mat-raised-button color="primary" routerLink="/platformazienda/signup"> New User <i class="fas fa-key"></i> </button>
+    <button mat-raised-button color="primary" routerLink='/platformazienda/signup'> New User <i class="fas fa-key"></i> </button>
   
 
   </div>
